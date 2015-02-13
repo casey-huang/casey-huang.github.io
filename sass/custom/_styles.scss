@@ -1,0 +1,338 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+$white: #FFFFFF;
+
+html {
+	background: $white;
+}
+
+body {
+	color: darken($wet-asphalt, 10%);
+	font-family: $sans !important;
+	font-size: 1em;
+	max-width: 850px;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+
+	.clear {
+		clear: both;
+	}
+
+	> header {
+		background: $white;
+		text-align: center;
+		padding-left: 0px;
+		padding-right: 0px;
+
+		h1 {
+			display: block;
+
+			a, a:visited {
+				color: $asbestos;
+				font-family: $heading-font-family;
+			}
+			a:hover {
+				color: $wet-asphalt;
+				margin-left: -37px;
+				&:before {
+					content: '> ';
+				}
+			}
+		}
+	}
+
+	> nav {
+		background: $white;
+		border-bottom: 1px solid #F2F2F2;
+		padding-left: 0px;
+		padding-right: 0px;
+
+		form .search {
+			border-radius: 0.2em 0.2em 0.2em 0.2em;
+			box-shadow: none;
+			border: 1px solid lighten($nav-bg, 15);
+			padding-top: 0.3em;
+			padding-bottom: 0.3em;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+			color: $wet-asphalt;
+			background: transparent;
+
+			&:focus {
+				-webkit-box-shadow: $peter-river 0 0 1px, $peter-river 0 0 1px inset;
+				-moz-box-shadow: $peter-river 0 0 1px, $peter-river 0 0 1px inset;
+				box-shadow: $peter-river 0 0 1px, $peter-river 0 0 1px inset;
+			}
+		}
+
+		a {
+			font-family: $sans;
+			font-size: 0.9em;
+			padding-top: 0.3em;
+			line-height: 1.5em;
+		}
+
+		li + li {
+			border-left: 0px;
+
+			a {
+				border-left: 0px;
+			}
+		}
+	}
+
+	> div {
+		background: $white;
+		border-bottom: 0px;
+
+		> div {
+			background: $white;
+			border-right-width: 0px;
+		}
+	}
+
+	> footer {
+		background: $white;
+		text-shadow: none;
+		color: $concrete;
+	  	padding-left: 0;
+	  	padding-right: 0;
+		border-top: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	#content {
+		article {
+			header h1.entry-title.article-title {
+			  &:not(.index-title) {
+					font-weight: 700;
+					font-size: 60px;
+					letter-spacing: -0.02em;
+			  }
+			}
+		}
+		> article {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		> div {
+			> article, > section {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+		}
+	}
+}
+
+article {
+	padding-top: 2em;
+
+	.entry-content {
+		h3 {
+		  font-size: 32px;
+		  font-style: normal;
+		  font-weight: 300;
+		  letter-spacing: -0.02em;
+		  line-height: 1.2;
+		  margin-top: 1em;
+		}
+
+		h4 {
+			font-size: 20px;
+		  font-style: normal;
+		  font-weight: normal;
+		}
+	}
+
+	ul, ol {
+		margin-left: 2em;
+	}
+
+	a, a:visited {
+		color: $belize-hole;
+	}
+
+	a:hover {
+		color: $peter-river;
+	}
+
+	a.goto-comments {
+		background: #ebebeb;
+		display: inline-block;
+		padding: .4em .8em;
+		margin-right: .5em;
+		text-decoration: none;
+		color: $wet-asphalt;
+		-webkit-transition: background-color 0.5s;
+		-moz-transition: background-color 0.5s;
+		-o-transition: background-color 0.5s;
+		transition: background-color 0.5s;
+
+		&:hover {
+			background: $peter-river;
+			text-shadow: none;
+			color: $clouds;
+		}
+	}
+
+	header {
+		h1.entry-title {
+			font-family: $heading-font-family;
+			font-weight: 400;
+			color: $wet-asphalt;
+
+			&.article-title {
+				float: left;
+
+				&:hover {
+					color: $peter-river;
+				}
+			}
+		}
+
+		.by-author {
+			float: left;
+			font-size: 17px;
+			padding: 1px;
+			margin-left: 8px;
+			margin-top: 16px;
+			font-style: italic;
+			color: $concrete;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	.small-text {
+		color: $concrete;
+		font-style: italic;
+		font-size: 80%;
+	}
+}
+
+#content {
+	div.pagination {
+		background: none repeat scroll 0 0 transparent;
+		margin: 0 10px;
+		font-size: 0.95em;
+		padding-bottom: 1.5em;
+		margin-top: 4em;
+		position: relative;
+		text-align: center;
+		border-top: dotted 1px #D1D1D1;
+		border-bottom: dotted 1px #D1D1D1;
+	}
+
+	.blog-index {
+		article {
+			padding-top: 4em;
+
+			header {
+				padding-left: 0;
+  				padding-right: 0;
+			}
+		}
+
+		h1 {
+			a {
+				font-family: $heading-font-family;
+				font-weight: 400;
+			}
+
+			a:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.hentry {
+		h1.entry-title {
+			font-family: $heading-font-family;
+			font-weight: 400;
+			font-size: 2.2em;
+		}
+	}
+
+}
+
+figure.code {
+	.highlight {
+		background: #212C3B !important;
+	}
+}
+
+.pre-code, html .gist .gist-file .gist-syntax .highlight pre, .highlight code {
+	background: #212C3B !important;
+}
+
+li pre code {
+	color: #93a1a1;
+}
+
+aside {
+	display: none;
+}
+
+.about-author {
+	border-left: 4px solid $concrete;
+	padding-left: 15px;
+
+	&.about-author-cyril {
+		border-left-color: $emerland;
+	}
+
+	&.about-author-neil {
+		border-left-color: $peter-river;
+	}
+
+	blockquote {
+		border-left: none;
+	}
+
+	.social-links {
+		margin-bottom: 35px;
+		padding-left: 19px;
+
+		.social-link {
+			text-align: justify;
+			text-decoration: none;
+			white-space: normal;
+			display: inline-block;
+			width: 160px;
+
+			.social-icon {
+				box-shadow: none;
+				border-radius: 0;
+				cursor: pointer;
+			}
+
+			.social-name {
+				position: relative;
+				top: -17px;
+				left: -5px;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+article p {
+  text-align: justify;
+}
