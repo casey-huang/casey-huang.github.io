@@ -6,34 +6,9 @@
 </description>
     <link>http://myblog.***.***/</link>
     <atom:link href="http://myblog.***.***/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 13 Feb 2015 04:16:44 -0500</pubDate>
-    <lastBuildDate>Fri, 13 Feb 2015 04:16:44 -0500</lastBuildDate>
+    <pubDate>Sun, 15 Feb 2015 23:15:27 -0500</pubDate>
+    <lastBuildDate>Sun, 15 Feb 2015 23:15:27 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>newRmd</title>
-        <description>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;http://rmarkdown.rstudio.com&gt;.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-</description>
-        <pubDate>Fri, 13 Feb 2015 00:00:00 -0500</pubDate>
-        <link>http://myblog.***.***/2015/02/13/New%20Rmd.html</link>
-        <guid isPermaLink="true">http://myblog.***.***/2015/02/13/New%20Rmd.html</guid>
-        
-        
-      </item>
     
       <item>
         <title>Untitled</title>
