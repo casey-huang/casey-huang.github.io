@@ -19,7 +19,7 @@ author_image: "/assets/images/IMG-20131210-WA0004.jpg"
 
 paginate:	5
 
-url: "http://casey-huang.github.io” 
+# url: "http://casey-huang.github.io” 
 
 # social icons and sharing options
 social:
