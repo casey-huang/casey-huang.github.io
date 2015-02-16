@@ -1,32 +1,53 @@
-# ----------------------- #
-#      Main Configs       #
-# ----------------------- #
+# Build settings
+markdown: redcarpet
+highlighter: pygments
 
-url: http://casey-huang.github.io
-title: Casey Huang
-subtitle: Visualization experiment playground
-author: Casey Huang
-description: 
+# Site settings
+title: "Mediator"
+description: > # this means to ignore newlines until "email:"
+   A Jekyll theme - Medium inspired
 
+email: a-mail@mail.mail
+#blog logo
+logo: "/assets/images/df_logo.jpg"
+# blog cover
+cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
 
-# ----------------------- #
-#    Jekyll & Plugins     #
-# ----------------------- #
+name: 'Dirk Fabisch'
+author: 'Dirk Fabisch'
+author_image: "/assets/images/author.jpg"
 
+paginate:	5
 
-paginate: 5          # Posts per page on the blog index
-pagination_dir:   # Directory base for pagination URLs eg. /blog/page/2/
-recent_posts: 5       # Posts in the sidebar Recent Posts section
-excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+url: "http://myblog.***.***" # the base hostname & protocol for your site
+baseurl: ""
 
-titlecase: true       # Converts page and post titles to titlecase
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com/dirkfabisch
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
 
+#  - icon:	facebook
+#    url:	https://facebook.com/???
+#    desc: Connect with me facebook
+#    share_url: //www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
 
-# ----------------------- #
-#   3rd Party Settings    #
-# ----------------------- #
+  - icon:	github
+    url:	https://github.com/dirkfabisch
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
 
-# Github repositories
-github_user: casey-huang
-
-
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:
