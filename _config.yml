@@ -3,43 +3,30 @@ markdown: redcarpet
 highlighter: pygments
 
 # Site settings
-title: "Mediator"
+title: “Casey Huang“
 description: > # this means to ignore newlines until "email:"
-   A Jekyll theme - Medium inspired
+   Visualization experiment playground
 
-email: a-mail@mail.mail
+email: yh2726@@columbia.edu
 #blog logo
-logo: "/assets/images/df_logo.jpg"
+logo: "/assets/images/IMG-20131210-WA0003.jpg"
 # blog cover
-cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
+cover: "/assets/images/283.jpg"
 
-name: 'Dirk Fabisch'
-author: 'Dirk Fabisch'
-author_image: "/assets/images/author.jpg"
+name: ‘Casey Huang’
+author: ‘Casey Huang’
+author_image: "/assets/images/IMG-20131210-WA0004.jpg"
 
 paginate:	5
 
-url: "http://myblog.***.***" # the base hostname & protocol for your site
+url: "http://casey-huang.github.io” # the base hostname & protocol for your site
 baseurl: ""
 
 # social icons and sharing options
 social:
-  - icon:	twitter
-    url:	https://twitter.com/dirkfabisch
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
-
-#  - icon:	facebook
-#    url:	https://facebook.com/???
-#    desc: Connect with me facebook
-#    share_url: //www.facebook.com/sharer.php
-#    share_title: ?t=
-#    share_link: "&amp;u="
 
   - icon:	github
-    url:	https://github.com/dirkfabisch
+    url:	https://github.com/casey-huang
     desc:	Fork me on github
     share_url:
     share_title:
