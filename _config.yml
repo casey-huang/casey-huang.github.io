@@ -3,7 +3,7 @@ markdown: redcarpet
 highlighter: pygments
 
 # Site settings
-title: “Casey Huang“
+title: Casey Huang
 description: > # this means to ignore newlines until "email:"
    Visualization experiment playground
 
