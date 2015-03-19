@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "trytrytry"
+date:   2015-03-18 22:34:25
+categories: jekyll update
+image: /assets/article_images/2015-03-10-mediator_features/night-track.JPG
+---
+
 Welcome to StackEdit!
 ===================
 
