@@ -4,7 +4,7 @@ title:  "let me try!"
 date:   2015-03-10 20:34:25
 categories: jekyll update
 tags: featured
-image: /assets/article_images/2015-03-10-mediator_features/night-track.jpg
+image: /assets/article_images/2015-03-10-mediator_features/night-track.JPG
 ---
 
 What's up, jekyll? 
