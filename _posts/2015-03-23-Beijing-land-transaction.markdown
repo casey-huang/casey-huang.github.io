@@ -3,6 +3,7 @@ layout: post
 title:  "Beijing Land Transaction"
 date:   2015-03-23 22:34:25
 categories: jekyll update
+tags: featured
 image: /assets/article_images/2015-03-23-Beijing-land-transaction/beijing_watercolor.jpeg
 ---
 
