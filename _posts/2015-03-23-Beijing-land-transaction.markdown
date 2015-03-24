@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Beijing Land Transaction"
+title:  "My first blogpost - Beijing Land Transaction"
 date:   2015-03-23 22:34:25
 categories: jekyll update
 tags: featured
 image: /assets/article_images/2015-03-23-Beijing-land-transaction/beijing_watercolor.jpeg
 ---
 
-##Beijing Land Transaction 2003-2013 Analysis
+##Beijing Land Transaction 2003-2013
+===================
 
 ###Source:
 
@@ -21,14 +22,13 @@ It looks like this:
 ###What's wrong:
 
 Dot plot on a map is not a good choice here:
-> - The details of transactions besides geo-location are all left out
+> - The details of transactions besides geo-location are all left out, merely any information
 > - When the dots are overlapped with each other, even density is hard to tell
 > - Impossible to observe trends
 
 ###First look at the dataset:
 
 After downloading the [shapefiles](https://www.dropbox.com/s/gc93o1iz7mcu6j9/DT2.rar), I want to use github's support with .geojson files to get a close look of data. Here's how I convert it:
-
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install gdal
@@ -37,12 +37,11 @@ ogr2ogr -f GeoJSON Downloads/beijing1.geojson Downloads/DT2geo/BJ_Land_Transacti
 
 <script src="https://embed.github.com/view/geojson/casey-huang/casey-huang.github.io/master/beijing1.geojson"></script>
 
-###Questions users may be interested in and how I'd present the graph:
+###Questions the audience may be interested in and how I'd present the graph:
 
 ####1. For the most recent transactions in year 2013, how do land unit prices of different land usage compare to each other?
 
 First, some necessary data munging:
-
 ```
 # read the shapefile and convert to data frame
 library(rgdal)
@@ -64,7 +63,6 @@ bj$unit_price = 100000 * bj$price / bj$plot_area
 ```
 
 The description in "use" is pretty messy now, I want to classify them into top categories and other.
-
 ```
 library(sqldf)
 industrial=sqldf("SELECT * FROM bj WHERE use LIKE '工业%'")
@@ -92,7 +90,6 @@ bj_all = rbind(residential, industrial, commercial, office, multiple, others)
 ```
 
 Make descending bar chart of median(unit_price) ~ class within 2013:
-
 ```
 all_2013 = subset(bj_all, as.Date(announce_date)>'2013-01-01')
 library(ggplot2)
@@ -110,7 +107,6 @@ Observe that the class "others" has the largest median price in 2013, after chec
 ####2. The movement of unit price and #transactions of different lands throughout 10 years?
 
 For unit price line, I didn't take each data point, because the extremity in price (a lot of 0 cost land and several super high cost) doesn't reflect the general trend, so I take the median of each class each year.
-
 ```
 # number of land transactions each year by land
 library(plyr)
@@ -136,7 +132,6 @@ Observe that there's sharp drop in number of transactions of residential land in
 ####3. Popular location to build a new store/shopping mall?
 
 Plot a static map using ggmap:
-
 ```
 commercial_2011 = subset(commercial, as.Date(announce_date)>'2011-01-01', select=c('Y','X'))
 library(ggmap)
