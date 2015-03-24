@@ -35,9 +35,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install gdal
 ogr2ogr -f GeoJSON Downloads/beijing1.geojson Downloads/DT2geo/BJ_Land_Transactions.shp
 ```
-----------
+
 <script src="https://embed.github.com/view/geojson/casey-huang/casey-huang.github.io/master/beijing1.geojson"></script>
-----------
+
+=======================
 
 ###Questions the audience may be interested in and how I'd present the graph:
 
@@ -167,11 +168,12 @@ The two maps tells the same story, and the populat spots for industrial or resid
 I intended to make a choropleth that change with time, and struggled using rMaps, since the feature of sliding time bar to view the district choropleth over time is desired. Since there's some issue I can't fix, I use CartoDB as an alternative:
 
 <iframe width='100%' height='520' frameborder='0' src='http://caseyhuang.cartodb.com/viz/35ace442-d234-11e4-a7aa-0e853d047bba/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-----------
+
+=================
 
 ###Difficulties and more to-be-worked-on:
 
-> - Missing data and messy preprocessing. Missing data is annoying , but the inconsistent preprocessing make things worse. By looking at the dataset, I would tell that not all missing data are recorded as "NA", some of them are recorded as 0 (as in floor_area_ratio, and plot_area etc.).
+> - Missing data and messy preprocessing. Missing data is annoying , but the inconsistent preprocessing make things worse. By looking at the dataset, I would tell that not all missing data are marked as "NA", some of them are recorded as 0 (as in floor_area_ratio, and plot_area etc.).
 > - In the bin map, since the "fill" is decided by bins, I didn't find a way to change coloring to the color look more intense for higher count.
 > - rMaps or other tools to make choropleth with sliding time.
 
