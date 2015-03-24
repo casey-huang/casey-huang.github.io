@@ -40,8 +40,7 @@ ogr2ogr -f GeoJSON Downloads/beijing1.geojson Downloads/DT2geo/BJ_Land_Transacti
 
 =======================
 
-##### <i class="icon-pencil"></i> Questions the audience may be interested in and how I'd present the graph:
-
+*Questions the audience may be interested in and how I'd present the graph:*
 
 ####1. For the most recent transactions in year 2013, how do land unit prices of different land usage compare to each other?
 
@@ -111,7 +110,7 @@ p1
 
 Observe that the class "others" has the largest median price in 2013, after checking the original usage and unit prices, I think it is because the variety of function of land here, including airports, hotels&restaurants, public utility, education, tech R&D, etc.
 
-####2. The movement of unit price and #transactions of different lands throughout 10 years?
+*2. The movement of unit price and #transactions of different lands throughout 10 years?*
 
 For unit price line, I didn't take each data point, because the extremity in price (a lot of 0 cost land and several super high cost) doesn't reflect the general trend, so I take the median of each class each year.
 
