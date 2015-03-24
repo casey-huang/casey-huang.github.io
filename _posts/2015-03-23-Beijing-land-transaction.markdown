@@ -40,7 +40,7 @@ ogr2ogr -f GeoJSON Downloads/beijing1.geojson Downloads/DT2geo/BJ_Land_Transacti
 
 =======================
 
-###Questions the audience may be interested in and how I'd present the graph:
+#####Questions the audience may be interested in and how I'd present the graph:
 
 ####1. For the most recent transactions in year 2013, how do land unit prices of different land usage compare to each other?
 
