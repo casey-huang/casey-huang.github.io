@@ -27,6 +27,7 @@ Dot plot on a map is not a good choice here:
 ###First look at the dataset:
 
 After downloading the [shapefiles](https://www.dropbox.com/s/gc93o1iz7mcu6j9/DT2.rar), I want to use github's support with .geojson files to get a close look of data. Here's how I convert it:
+
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install gdal
@@ -40,6 +41,7 @@ ogr2ogr -f GeoJSON Downloads/beijing1.geojson Downloads/DT2geo/BJ_Land_Transacti
 ####1. For the most recent transactions in year 2013, how do land unit prices of different land usage compare to each other?
 
 First, some necessary data munging:
+
 ```
 # read the shapefile and convert to data frame
 library(rgdal)
@@ -61,6 +63,7 @@ bj$unit_price = 100000 * bj$price / bj$plot_area
 ```
 
 The description in "use" is pretty messy now, I want to classify them into top categories and other.
+
 ```
 library(sqldf)
 industrial=sqldf("SELECT * FROM bj WHERE use LIKE '工业%'")
@@ -88,6 +91,7 @@ bj_all = rbind(residential, industrial, commercial, office, multiple, others)
 ```
 
 Make descending bar chart of median(unit_price) ~ class within 2013:
+
 ```
 all_2013 = subset(bj_all, as.Date(announce_date)>'2013-01-01')
 library(ggplot2)
@@ -97,13 +101,15 @@ plotdf$land_use <- with(plotdf, reorder(land_use_2013, -median_unit_price))
 p1 = ggplot(plotdf, aes(y=median_unit_price, x=land_use_2013)) + geom_bar(stat = "identity")
 p1
 ```
-![](http://casey-huang.github.io/assets/article_images/2015-03-23-Beijing-land-transaction/unit_class.png)
-Observe that the class "others" has the largest median price in 2013, after checking the original usage and unit prices, I think it is because the variety of function of land here, including airports, hotels&restaurants, public utility, education, tech R&D, etc.
 
+![](http://casey-huang.github.io/assets/article_images/2015-03-23-Beijing-land-transaction/unit_class.png)
+
+Observe that the class "others" has the largest median price in 2013, after checking the original usage and unit prices, I think it is because the variety of function of land here, including airports, hotels&restaurants, public utility, education, tech R&D, etc.
 
 ####2. The movement of unit price and #transactions of different lands throughout 10 years?
 
 For unit price line, I didn't take each data point, because the extremity in price (a lot of 0 cost land and several super high cost) doesn't reflect the general trend, so I take the median of each class each year.
+
 ```
 # number of land transactions each year by land
 library(plyr)
@@ -121,12 +127,15 @@ p3 = ggplot(plotdf2, aes(x=year, y=median_unit_price, group = class, colour = cl
 library(gridExtra)
 grid.arrange(arrangeGrob(p2, p3))
 ```
+
 ![](http://casey-huang.github.io/assets/article_images/2015-03-23-Beijing-land-transaction/by_year.png)
+
 Observe that there's sharp drop in number of transactions of residential land in between 2004 and 2005. This should be due to the large amendment of land management law that took place in 2004.
 
 ####3. Popular location to build a new store/shopping mall?
 
 Plot a static map using ggmap:
+
 ```
 commercial_2011 = subset(commercial, as.Date(announce_date)>'2011-01-01', select=c('Y','X'))
 library(ggmap)
@@ -145,8 +154,10 @@ p5 = bjbase +
 p4
 p5
 ```
+
 ![](http://casey-huang.github.io/assets/article_images/2015-03-23-Beijing-land-transaction/p4.png)
 ![](http://casey-huang.github.io/assets/article_images/2015-03-23-Beijing-land-transaction/p5.png)
+
 The two maps tells the same story, and the populat spots for industrial or residential development can be drawn similarly too.
 
 ####4 Interactive map?
@@ -154,6 +165,7 @@ The two maps tells the same story, and the populat spots for industrial or resid
 I intended to make a choropleth that change with time, and struggled using rMaps, since the feature of sliding time bar to view the district choropleth over time is desired. Since there's some issue I can't fix, I use CartoDB as an alternative:
 
 <iframe width='100%' height='520' frameborder='0' src='http://caseyhuang.cartodb.com/viz/35ace442-d234-11e4-a7aa-0e853d047bba/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
 
 ###Difficulties and more to-be-worked-on:
 
