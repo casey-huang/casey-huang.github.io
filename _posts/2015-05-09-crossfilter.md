@@ -7,4 +7,4 @@ tags: featured
 image: /assets/article_images/2015-03-23-Beijing-land-transaction/beijing_watercolor.jpeg
 ---
 
-<iframe src="https://github.com/casey-huang/casey-huang.github.io/edit/master/assets/crossfilter/" width="600" height="400" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe src="https://github.com/casey-huang/casey-huang.github.io/edit/master/assets/crossfilter/index.html" width="600" height="400" marginwidth="0" marginheight="0" scrolling="no"></iframe>
