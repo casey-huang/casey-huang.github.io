@@ -7,4 +7,4 @@ tags: featured
 image: /assets/article_images/2015-05-09-crossfilter/desktop.JPG
 ---
 
-<iframe src="/assets/crossfilter/" width="800" height="800" marginwidth="0" marginheight="0" scrolling="no" align="left"></iframe>
+<iframe src="/assets/crossfilter/" width="700" height="1200" marginwidth="0" marginheight="0" scrolling="no" align="left"></iframe>
