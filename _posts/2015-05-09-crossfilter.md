@@ -32,6 +32,7 @@ It should be 3*2 so that everything is in one screen at the same time, but limit
 
 <iframe src="/assets/crossfilter/" width="650" height="1010" marginwidth="0" marginheight="0" scrolling="no" align="left"></iframe>
 
+
 ###Several findings at first sight
 
 > - The students' survey has much stronger correlation with SAT performance than teachers' and parents'.
@@ -39,5 +40,3 @@ It should be 3*2 so that everything is in one screen at the same time, but limit
 > - Schools that are more friendly to disabled students get higher score.
 > - Surprisingly, the schools where students' name are less known by the adults get higher score. This may be reasonable with one of our other findings, that school performance is better with larger class size.
 > - The schools where the stuedents think the teaching staff don't expect them to get a higher education don't have good SAT performance.
-
-
