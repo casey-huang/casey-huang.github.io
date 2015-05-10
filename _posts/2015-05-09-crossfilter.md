@@ -13,7 +13,7 @@ The purpose of the whole project is to explore the potential factors with strong
 
 ###The datasets
 
-> - NYC school survey dataset of year 2013 ([here](http://schools.nyc.gov/Accountability/tools/survey/2013.htm)). It's nice that the students and teachers' response rate is over 83%, and the parents' 66%.
+> - NYC school survey dataset of year 2013 ([here](http://schools.nyc.gov/Accountability/tools/survey/2013.htm)). It's nice that the students and teachers' response rate is over 83%, and the parents' 66%. The scoring scale&method is also on this site.
 > - NYC High school SAT score dataset of year 2012 ([here](https://data.cityofnewyork.us/Education/SAT-Results/f9bf-2cp4))
 
 The cleaned datasets are joined on dbn, which is a unique identifier for schools. Since our main interest here is to study SAT performance, I didn't include the schools that didn't report SAT scores in the graph.
@@ -31,3 +31,13 @@ However, we don't want hundreds of independent variables on the screen, and the 
 It should be 3*2 so that everything is in one screen at the same time, but limited by the width of the blogpost, I changed the layout to 2*3, so you may want to zoom-out to view the whole visualization.
 
 <iframe src="/assets/crossfilter/" width="650" height="1010" marginwidth="0" marginheight="0" scrolling="no" align="left"></iframe>
+
+###Several findings at first sight
+
+> - The students' survey has much stronger correlation with SAT performance than teachers' and parents'.
+> - The schools in the upper tail of math score must have few gang activities, and students have to feel safe in class to get a high score.
+> - Schools that are more friendly to disabled students get higher score.
+> - Surprisingly, the schools where students' name are less known by the adults get higher score. This may be reasonable with one of our other findings, that school performance is better with larger class size.
+> - The schools where the stuedents think the teaching staff don't expect them to get a higher education don't have good SAT performance.
+
+
