@@ -105,8 +105,8 @@ d3.csv("data/SatandSurveydata.csv", function (survey_data) {
 
         volumeChartSurveyF.xUnits(function(){return 25;});
 
-        volumeChartSAT.width(950)
-                .height(230)
+        volumeChartSAT.width(650)
+                .height(180)
                 .dimension(sat)
                 .group(sats)
                 .transitionDuration(1500)
